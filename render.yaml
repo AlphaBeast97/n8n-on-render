@@ -1,0 +1,39 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    plan: free
+    repo: https://github.com/your-username/your-n8n-repo
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DB_TYPE
+        value: postgresdb
+      - key: DB_POSTGRESDB_HOST
+        value: trolley.proxy.rlwy.net
+      - key: DB_POSTGRESDB_PORT
+        value: 5432
+      - key: DB_POSTGRESDB_DATABASE
+        value: railway
+      - key: DB_POSTGRESDB_USER
+        value: postgres
+      - key: DB_POSTGRESDB_PASSWORD
+        value: AFMckEezcWMcCJsDBDSPecJUrufjFmAv
+      - key: DB_POSTGRESDB_SSL
+        value: "true"
+      - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
+        value: "false"
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: admin
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: securepassword123
+      - key: N8N_ENCRYPTION_KEY
+        value: my-secure-encryption-key
+      - key: N8N_HOST
+        value: n8n.onrender.com
+      - key: N8N_PROTOCOL
+        value: https
+      - key: WEBHOOK_URL
+        value: https://n8n.onrender.com
