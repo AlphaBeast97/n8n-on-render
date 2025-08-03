@@ -30,6 +30,10 @@ services:
       # encrypted with the previous value.
       - key: N8N_ENCRYPTION_KEY
         generateValue: true
+      - key: N8N_HOST
+        value: ${MY_N8N_SERVICE.url}
+      - key: WEBHOOK_URL
+        value: ${MY_N8N_SERVICE.url}
 
       # These automatically populate connection details
       # for the Render Postgres database defined below
