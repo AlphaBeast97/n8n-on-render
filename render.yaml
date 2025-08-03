@@ -31,9 +31,9 @@ services:
       - key: N8N_ENCRYPTION_KEY
         generateValue: true
       - key: N8N_HOST
-        value: ${MY_N8N_SERVICE.url}
+        value: ${RENDER_EXTERNAL_HOSTNAME}
       - key: WEBHOOK_URL
-        value: ${MY_N8N_SERVICE.url}
+        value: ${RENDER_EXTERNAL_URL}
 
       # These automatically populate connection details
       # for the Render Postgres database defined below
